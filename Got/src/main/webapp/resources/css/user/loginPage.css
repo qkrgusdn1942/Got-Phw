@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.loginContainer {margin-top:5%;}
+.loginBox {border:2px #d8d8d8 solid; margin-top:3%; padding:30px;}
+.inputCol {text-align: -webkit-center}
+.inputLogin {width: 500px; }
+.activeMenu {list-style: none; text-align:center; font-size:20px; padding-left:0px;margin-bottom: 0px;}
+.activeMenu li {display:inline; vertical-align: middle; margin-left:20px; text-align:left;}
+.activeMenu li:first-child {margin-left:0px;}
+.activeMenu li a{text-decoration:none; color:black;}
+.activeMenu li a i {margin-right:10px;}
+
+#loginButton {width:500px;}
