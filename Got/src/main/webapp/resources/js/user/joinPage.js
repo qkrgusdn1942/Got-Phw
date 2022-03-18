@@ -13,18 +13,22 @@ window.addEventListener("DOMContentLoaded" , function(){
 			preferenceArr.push($(this).val());
 		});
 		
+		let data = {};
+		data["id"] = $(".inputId").val();
+		data["pw"] = $(".inputPwCon").val();
+		data["nick"] = $(".inputNick").val();
+		data["mbti"] = $(".inputMbti").val();
+		
+		console.log(data);
+		
 		$.ajax({
-			type : "get" ,
+			type : "post" ,
 			url : "http://localhost:8181/got/user/joinProcess" ,
 			async : false,
 			data : {
-				id : $(".inputId").val(),
-				pw : $(".inputPwCon").val(),
-				nick : $(".inputNick").val(),
-				prefer : preferenceArr,
-				mbti : $(".inputMbti").val()
+				data:JSON.stringify(data),
 			},
-			dataType : "json",
+			dataType : 'json',
 			// contentType : "application/x-www-form-urlencoded", // post
 			success : function(data) {
 				
