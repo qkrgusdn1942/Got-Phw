@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public interface UserSQLMapper {
 	
-	
+	public int insertUserPk ();
 	
 	
 	

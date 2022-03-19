@@ -18,5 +18,14 @@ public class UserService {
 		
 		return userSQLMapper.getMbtiList();
 	}
+	
+	
+	
+	public void joinUserProcess (HashMap<String, Object> Param, ArrayList<String> prefer) {
+		
+		int userNo = userSQLMapper.insertUserPk();
+		
+		
+	}
 
 }

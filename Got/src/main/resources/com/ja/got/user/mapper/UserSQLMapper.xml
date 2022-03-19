@@ -4,9 +4,49 @@
 
 <mapper namespace="com.ja.got.user.mapper.UserSQLMapper">
 
+	<select id="insertUserPk" resultType="int">
+		SELECT Got_user_seq.nextval FROM dual
+	</select>
+
+	
+
+	<insert id="insertUser">
+		INSERT INTO Got_user VALUES (
+			#{userNo},
+			#{id},
+			#{pw},
+			#{nick},
+			SYSDATE,
+			'0',
+			'1'
+		)
+	</insert>
+	
+	<insert id="insertUserPreference">
+		INSERT INTO Got_userPreference VALUES (
+			Got_userPreference_seq.nextval,
+			#{userNo},
+			#{prefer}
+		)
+	</insert>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<select id="getMbtiList" resultType="map">
 		SELECT * FROM Got_Mbti_Category
 	</select>
+	
+	
 
 
 

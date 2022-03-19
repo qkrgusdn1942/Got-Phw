@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="../resources/js/commons/allPageJs.js"></script>
-<script type="text/javascript" src="../resources/js/user/joinPage.js?v=5"></script>
+<script type="text/javascript" src="../resources/js/user/joinPage.js?v=7"></script>
 <link rel="stylesheet" type="text/css" href="../resources/css/commons/All.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/user/joinPage.css?v=1">
 

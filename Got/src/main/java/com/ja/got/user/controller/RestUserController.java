@@ -1,5 +1,7 @@
 package com.ja.got.user.controller;
 
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,16 +22,15 @@ public class RestUserController {
 	private UserService userService;
 	
 	@RequestMapping("joinProcess")
-	public HashMap<String, Object> joinProcess (@RequestParam HashMap<String, Object> joinParam) {
+	public HashMap<String, Object> joinProcess (
+			@RequestBody
+			@RequestParam HashMap<String, Object> Param,
+			@RequestParam(value="prefer[]") ArrayList<String> prefer) {
 		
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		
-		System.out.println("id : " + joinParam.get("id"));
-		System.out.println("pw : " + joinParam.get("pw"));
-		System.out.println("nick : " + joinParam.get("nick"));
-		System.out.println("prefer : " + joinParam.get("prefer"));
-		System.out.println("mbti : " + joinParam.get("mbti"));
-		System.out.println("id check : " + joinParam.containsKey("id"));
+		userService.joinUserProcess(Param, prefer);
+		
 		
 		return data;
 	}
